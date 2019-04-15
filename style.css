@@ -1,34 +1,238 @@
-body {
-    margin: 0;
-    display: grid;
-    grid-template-rows: 500px 250px 300px 200px 100px;
-    grid-template-columns: auto;
-    grid-template-areas: 'header' 'section' 'article' 'aside' 'footer';
 
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+ }
+
+ body {
+    display: grid;
+    grid-template-rows: 13.7cm 7.6cm 9.7cm 10.5cm 3cm;
+    grid-template-areas: 'header' 'section' 'article' 'aside' 'footer';
+    font-family: 'Hind', sans-serif;
 }
 
-
-
 header{
-    border-top: 9px solid #37cc70;
-    grid-area: header;
+    grid-template-rows: 100%;
+    border-top: 8px solid #2DCB70;
+    grid-area: 'header';
     display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: 'text' 'foto';
     background-image: url("img/banner.png");
     background-size: cover;
 }
 
-section{
+.first-part{
+    grid-area: 'text';
+    margin-top: 120px;
+    margin-left: 280px;
+}
 
+.second-part{
+    grid-area: 'foto';
+    padding: 73px;
+}
+
+h1{
+    font-family: 'Pacifico', cursive;
+    font-size: 50px;
+    color: white;
+    font-weight: normal;
+}
+
+h1 span{
+    color: #2DCB70;
+}
+
+header div p{
+    color: white;
+    font-size: 22px;
+}
+
+.icone1{
+    background-color: black;
+    border-radius: 100%;
+    opacity: 0.3;
+    padding: 10px;
+}
+
+.icone2{
+    background-color: black;
+    border-radius: 100%;
+    opacity: 0.3;
+    padding: 10px;
+}
+
+.icone3{
+    background-color: black;
+    border-radius: 100%;
+    opacity: 0.3;
+    padding: 10px;
+}
+.icone1:hover{
+    background-color:#2DCB70;
+    border-radius: 100%;
+    opacity: 0.5;
+}
+
+.icone2:hover{
+    background-color:#2DCB70;
+    border-radius: 100%;
+    opacity: 0.5;
+}
+
+.icone3:hover{
+    background-color:#2DCB70;
+    border-radius: 100%;
+    opacity: 0.5;
+}
+
+section{ 
+    grid-area: 'section';
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas: 'editable' 'design' 'audience';
+    background-color: white;
+    display: flex;
+    text-align: center;
+    margin-top: 54px;
+}
+
+section div img{
+    background-color:#2DCB70;
+    border-radius: 100%;
+    padding: 20px;
+}
+
+h5{
+    font-size: 20px;
+    font-weight: normal;
+}
+
+.editable{
+    grid-area: editable;
+}
+
+.flat{
+    grid-area: design;
+}
+
+.audience{
+    grid-area: audience;
 }
 
 article{
+    grid-area: 'article';
+    background-color:  #e3e3e3;
+    padding-top: 50px;
+    padding-bottom: 60px;
+    display: grid;
+    grid-template-columns: 180px 460px 1fr 426px 160px;
+    grid-template-areas: '. left . right .';
+    font-family: 'Hind', sans-serif;
+}
 
+.texto{
+    grid-area: left;
+}
+
+.iframe{
+    grid-area: right;
+}
+
+h2{
+    font-size: 20px;
+    color: #141414;
+}
+
+p{
+    margin-top: 25px;
+    color: #969696;
+    font-size: 16px;
+}
+
+article div input{
+    width: 280px;
+    height: 50px;
+    margin-top: 25px;
+    border-radius: 15px 0px 0px 15px;
+    border: none;
+    padding: 10px;
+}
+
+input::placeholder{
+    color: grey;
+    font-size: 16px;
+}
+
+.email input{
+    flex-grow: 1;
+}
+
+.botao{
+    background-color: #2DCB70;
+    color: white;
+    font-size: 20px;
+    width: 100px;
+    height: 53px;
+    margin: 0px 0px 4px -13px;
+    border-radius: 0px 15px 15px 0px;
+    border:none;
 }
 
 aside{
+    grid-area: 'aside';
+    text-align: center;
+    font-family: 'Hind', sans-serif;
+}
 
+aside p{
+    text-align:center;
+    color:#8a8a8a;
+    font-size: 16px;
+    font-style: italic;
+}
+
+h4{
+    color: black;
+    font-style: normal;
+    font-size: 16px;
+}
+
+aside div img{
+    height: 40px;
+    text-align: center;
+}
+
+.pessoa:hover{
+    opacity: 0.5;
+    color:#2DCB70;
+}
+
+h3{
+    color: black;
+    text-align: center;
+    font-size: 22px;
+    font-weight: bold;
+    padding: 40px;
 }
 
 footer{
+    grid-area: 'footer';
+    background-color: #e3e3e3;
+    width: 100%;
+    height: 100%;
+    padding-bottom: 24px;
+    text-align: center;
+    padding: 46px;
+}
 
+footer a{
+    text-decoration: none;
+    color: grey;
+    font-size: 10pt;
+    font-family: 'Hind', sans-serif;
+    margin-left: 15px;
+    margin-right: 15px;
 }
